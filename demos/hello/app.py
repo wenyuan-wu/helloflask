@@ -14,7 +14,12 @@ app = Flask(__name__)
 # the minimal Flask application
 @app.route('/')
 def index():
-    return '<h1>Hello, World!</h1>'
+    con = """
+    <p>
+    <img style="width: 100%; max-width: 100%;" src="https://i.redd.it/gmy7rb2l8g441.png" alt="Default">
+    </p>
+    """
+    return '<h1>Hello, World! </h1>%s' % con
 
 
 # bind multiple URL for one view function
